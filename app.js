@@ -70,6 +70,11 @@ const PORT = 3000;
 const DATA_FILE = './data.json';
 
 // Endpoint to get data from JSON file
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 app.get('/data', (req, res) => {
     fs.readFile(DATA_FILE, (err, data) => {
         if (err) {
